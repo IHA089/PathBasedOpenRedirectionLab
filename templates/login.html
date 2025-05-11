@@ -47,6 +47,7 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.html">Home</a></li>
 							<li><a href="login.html">Login</a></li>
+							<li><a href="check.html">Submit Flag</a></li>
 							<li><a href="join.html">Join Now</a></li>
 							<li><a href="https://iha089.org">Official Website</a></li>
 							<li>
@@ -64,6 +65,7 @@
 			<div class="form-container">
 				<form action="/login" method="POST" id="loginForm">
 					<p id="error-message" style="color: red;">{% if error %}{{ error }}{% endif %}</p>
+					<input type="hidden" name="next" value="{{ next_url }}">
 					<label><b>Username or E-Mail</b></label>
 					<input type="text" name="username" id="username" required>
 					<br>
